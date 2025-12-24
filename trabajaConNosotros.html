@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="es-UY">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Trabajá con nosotros | Clínica Casa Verde</title>
+    <meta name="description" content="Enviá tu postulación para trabajar en Clínica Casa Verde." />
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="index.html" aria-label="Ir a inicio">
+                <img src="img/logo.png" alt="Clínica Casa Verde" class="brand-logo" />
+            </a>
+
+            <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav">Menú</button>
+
+            <nav class="nav" id="siteNav">
+                <a href="index.html">Inicio</a>
+                <a href="servicios.html">Servicios</a>
+                <a href="equipo.html">Equipo</a>
+                <a href="convenios.html">Convenios</a>
+                <a href="beneficios.html">Beneficios</a>
+                <a href="galeria.html">Galería</a>
+                <a href="contacto.html">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO -->
+        <section class="page-hero">
+            <div class="page-hero-bg" style="--hero-img: url('img/equipo/hero.jpeg');"></div>
+            <div class="container page-hero-inner">
+                <h1>Trabajá con nosotros</h1>
+                <p class="page-hero-quote">“Sumate a un equipo interdisciplinario, cercano y comprometido.”</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="section-head">
+                    <h2>Postulación</h2>
+                    <p class="muted">Completá tus datos y adjuntá tu CV. Te responderemos a la brevedad.</p>
+                </div>
+
+                <!-- FORM -->
+                <form class="cv-form" action="https://formspree.io/f/mnjayojo" method="POST"
+                    enctype="multipart/form-data">
+                    <!-- Para que el mail del destinatario tenga un asunto claro -->
+                    <input type="hidden" name="_subject" value="Nueva postulación - Clínica Casa Verde" />
+
+                    <div class="form-grid">
+                        <label class="field">
+                            <span>Nombre y apellido *</span>
+                            <input name="Nombre y apellido" type="text" required autocomplete="name" />
+                        </label>
+
+                        <label class="field">
+                            <span>Teléfono *</span>
+                            <input name="Teléfono" type="tel" required autocomplete="tel" />
+                        </label>
+
+                        <label class="field">
+                            <span>Email *</span>
+                            <input name="Email" type="email" required autocomplete="email" />
+                        </label>
+
+                        <label class="field">
+                            <span>Área / Servicio de interés *</span>
+                            <select name="Área de interés" required>
+                                <option value="" disabled selected>Seleccioná una opción</option>
+                                <option>Psicología</option>
+                                <option>Psiquiatría</option>
+                                <option>Neuropsicología</option>
+                                <option>Neurología</option>
+                                <option>Neuropediatría</option>
+                                <option>Fonoaudiología</option>
+                                <option>Psicomotricidad</option>
+                                <option>Psicopedagogía</option>
+                                <option>Fisioterapia</option>
+                                <option>Fisioterapia acuática</option>
+                                <option>AQUA TEA</option>
+                                <option>Nutrición</option>
+                                <option>Terapia ocupacional</option>
+                                <option>Médica de familia</option>
+                                <option>Psicofísicos</option>
+                                <option>Endocrinología - Diabetología</option>
+                                <option>Administración / Recepción</option>
+                                <option>Otro</option>
+                            </select>
+                        </label>
+                    </div>
+
+                    <label class="field">
+                        <span>Estudios / Formación *</span>
+                        <input name="Estudios / Formación" type="text" required
+                            placeholder="Ej: Lic. en Psicología, UDELAR (2024)" />
+                    </label>
+
+                    <label class="field">
+                        <span>Experiencia (opcional)</span>
+                        <input name="Experiencia" type="text"
+                            placeholder="Ej: 2 años en clínica / consultorio / centro educativo..." />
+                    </label>
+
+                    <label class="field">
+                        <span>Mensaje / Información extra</span>
+                        <textarea name="Mensaje" rows="5"
+                            placeholder="Contanos brevemente sobre vos, disponibilidad horaria, etc."></textarea>
+                    </label>
+
+                    <label class="field">
+                        <span>Adjuntar CV (PDF/JPG/PNG) *</span>
+                        <input name="CV" type="file" required />
+                        <small class="muted">Sugerencia: PDF. También puede ser foto del CV.</small>
+                    </label>
+
+                    <label class="check">
+                        <input type="checkbox" name="Acepta contacto" required />
+                        <span>Acepto que Clínica Casa Verde se comunique conmigo por los medios brindados.</span>
+                    </label>
+
+                    <div class="form-actions">
+                        <button class="btn btn-primary" type="submit">Enviar postulación</button>
+                        <a class="btn btn-ghost" href="equipo.html">Volver a Equipo</a>
+                    </div>
+
+                    <!-- Mensajito opcional -->
+                    <p class="muted" style="margin-top: 12px;">
+                        Si tenés problemas para adjuntar el archivo, podés enviarlo por WhatsApp desde el botón 💬.
+                    </p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <p class="muted">© <span id="year"></span> Clínica Casa Verde · La Paz, Canelones, Uruguay</p>
+            <a class="muted" href="index.html">Volver a inicio</a>
+        </div>
+    </footer>
+
+    <a class="fab" id="fabWhatsapp" href="#" aria-label="WhatsApp" rel="noopener">💬</a>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
