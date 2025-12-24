@@ -145,12 +145,12 @@ const hero = document.querySelector(".hero");
 
 if (hero) {
     const images = [ //SI QUIERO AGREGAR MAS IMAGENES PONGO ACA LA RUTA
-        "../img/Neuro3.jpg",
-        "../img/clinicaFrente.jpg",
-        "../img/Fono.jpg",
-        "../img/recepcion.jpg",
-        "../img/Sala4.jpg",
-        "../img/Salita.jpg"
+        "img/Neuro3.jpg",
+        "img/clinicaFrente.jpg",
+        "img/Fono.jpg",
+        "img/recepcion.jpg",
+        "img/Sala4.jpg",
+        "img/Salita.jpg"
     ];
 
     let index = 0;
