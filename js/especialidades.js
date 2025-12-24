@@ -9,12 +9,13 @@
     const basePath = `../img/especialidades/${folder}/`;
 
     const imagenes = [
-        basePath + "1.jpg",
-        basePath + "2.jpg",
-        basePath + "3.jpg",
-        basePath + "4.jpg",
-        basePath + "5.jpg"
+        basePath + "1.JPG",
+        basePath + "2.JPG",
+        basePath + "3.JPG",
+        basePath + "4.JPG",
+        basePath + "5.JPG"
     ];
+
 
     let indice = 0;
 
@@ -43,7 +44,7 @@
             };
         }, 180);
     }
-    
+
 
     btnNext.addEventListener("click", () => {
         mostrarImagen(indice + 1);
