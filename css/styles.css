@@ -1131,26 +1131,3 @@ textarea:focus {
   transform: translateY(-2px);
 }
 
-/* Botones tipo pastilla (inicio: conocer / trabaja / convenios) */
-.btn-ghost,
-.btn-secundario {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: .9rem 1.8rem;
-  border-radius: 999px;
-  font-weight: 700;
-  text-decoration: none;
-
-  background: #ffffff;
-  color: #2f6b4f;
-  border: 2px solid #2f6b4f;
-
-  transition: background .25s ease, transform .2s ease;
-}
-
-.btn-ghost:hover,
-.btn-secundario:hover {
-  background: #e8f3ee;
-  transform: translateY(-2px);
-}
