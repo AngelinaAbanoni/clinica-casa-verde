@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Nutrición | Clínica Casa Verde</title>
+
+    <!-- CSS general del sitio -->
+    <link rel="stylesheet" href="../css/styles.css" />
+    <!-- CSS para páginas de especialidades -->
+    <link rel="stylesheet" href="../css/especialidades.css" />
+</head>
+
+<body>
+
+    <!-- HEADER / NAV -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="../index.html" aria-label="Ir a inicio">
+                <img src="../img/logo.png" alt="Clínica Casa Verde" class="brand-logo">
+            </a>
+
+            <nav class="nav">
+                <a href="../index.html">Inicio</a>
+                <a href="../servicios.html">Servicios</a>
+                <a href="../equipo.html">Equipo</a>
+                <a href="../convenios.html">Convenios</a>
+                <a href="beneficios.html">Beneficios</a>
+                <a href="../galeria.html">Galería</a>
+                <a href="../contacto.html">Contacto</a>
+
+                <!-- <a class="btn btn-primary" href="agenda.html">Agendar</a> -->
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO -->
+        <section class="page-hero hero-especialidad hero-nutricion">
+            <div class="page-hero-bg" style="--hero-img: url('../img/especialidades/nutricion/hero.jpg');"></div>
+
+            <div class="container page-hero-inner">
+                <h1>Nutrición</h1>
+                <p class="page-hero-quote">
+                    “Acompañamiento nutricional personalizado.”
+                </p>
+            </div>
+        </section>
+
+        <section class="especialidad-info">
+            <div class="container">
+                <h2>¿Qué es la Nutrición?</h2>
+
+                <p>
+                    La nutrición es una disciplina de la salud que se ocupa de la alimentación y
+                    su impacto en el organismo, considerando las necesidades nutricionales de cada
+                    persona a lo largo de las distintas etapas de la vida. A través de una
+                    evaluación integral, la nutrición busca promover hábitos alimentarios
+                    saludables que favorezcan el bienestar físico y mental.
+                </p>
+
+                <p>
+                    El abordaje nutricional contempla aspectos biológicos, emocionales, sociales
+                    y culturales relacionados con la alimentación. No se centra únicamente en el
+                    peso corporal, sino en la construcción de una relación saludable con la comida,
+                    adaptada a las características, objetivos y contexto de cada persona.
+                </p>
+
+                <h3>¿Para qué sirve la Nutrición en una clínica?</h3>
+
+                <p>
+                    Dentro de una clínica interdisciplinaria, la nutrición cumple un rol fundamental
+                    en la prevención, el tratamiento y el acompañamiento de diversas condiciones de
+                    salud. A través de la atención nutricional se pueden abordar situaciones como:
+                </p>
+
+                <ul class="especialidad-lista">
+                    <li>Mejora de hábitos alimentarios y educación nutricional.</li>
+                    <li>Acompañamiento en procesos de cambio de peso.</li>
+                    <li>Alimentación en etapas específicas del desarrollo.</li>
+                    <li>Abordaje nutricional de enfermedades crónicas.</li>
+                    <li>Trastornos de la conducta alimentaria.</li>
+                    <li>Planificación alimentaria personalizada.</li>
+                </ul>
+
+                <p>
+                    La nutrición brinda herramientas prácticas y personalizadas que permiten
+                    mejorar la calidad de vida, prevenir enfermedades y favorecer un estado de
+                    salud integral. El objetivo es acompañar a cada persona en la construcción de
+                    hábitos sostenibles, respetuosos y acordes a sus necesidades.
+                </p>
+            </div>
+        </section>
+
+        <!-- GALERÍA -->
+        <section class="especialidad-galeria">
+            <div class="container">
+                <h2>Galería de fotos</h2>
+
+                <div class="galeria-slider" data-folder="nutricion">
+                    <button class="galeria-btn prev">&#10094;</button>
+
+                    <img id="galeriaImg" class="galeria-img" src="../img/especialidades/nutricion/1.jpg"
+                        alt="Espacio de atención">
+
+                    <button class="galeria-btn next">&#10095;</button>
+                </div>
+
+                <p class="galeria-hint">Hacé click en las flechas para ver más fotos.</p>
+
+                <!-- ✅ Botón igual al inicio -->
+                <div class="especialidad-cta">
+                    <a href="../agenda.html" class="btn btn-primary">Agendar consulta</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- VOLVER -->
+        <section class="volver-servicios">
+            <div class="container">
+                <a class="btn-volver" href="../servicios.html#especialidades">← Volver a Servicios</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (tu footer de siempre) -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <p class="muted">© <span id="year"></span> Clínica Casa Verde · La Paz, Canelones, Uruguay</p>
+            <a class="muted" href="../index.html">Volver a inicio</a>
+        </div>
+    </footer>
+
+    <a class="fab" id="fabWhatsapp" href="#" aria-label="WhatsApp" rel="noopener">💬</a>
+
+    <!-- ✅ scripts con ruta correcta -->
+    <script src="../js/main.js"></script>
+    <script src="../js/especialidades.js"></script>
+</body>
+
+</html>

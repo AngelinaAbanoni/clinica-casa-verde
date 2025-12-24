@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="es-UY">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Galería | Clínica Casa Verde</title>
+    <meta name="description" content="Galería de imágenes de Clínica Casa Verde." />
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="index.html" aria-label="Ir a inicio">
+                <img src="img/logo.png" alt="Clínica Casa Verde" class="brand-logo" />
+            </a>
+
+            <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav">
+                Menú
+            </button>
+
+            <nav class="nav" id="siteNav">
+                <a href="index.html">Inicio</a>
+                <a href="servicios.html">Servicios</a>
+                <a href="equipo.html">Equipo</a>
+                <a href="convenios.html">Convenios</a>
+                <a href="beneficios.html">Beneficios</a>
+                <a href="galeria.html">Galería</a>
+                <a href="contacto.html">Contacto</a>
+                <!-- <a class="btn btn-primary" href="agenda.html">Agendar</a> -->
+
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <div class="section-head">
+                    <h2>Galería</h2>
+                    <p class="muted">Mostramos el espacio, consultorios, actividades, etc.</p>
+                </div>
+
+                <div class="gallery" id="gallery">
+                    <!-- Cambiá los data-img por tus imágenes reales -->
+                    <button class="gallery-item" data-img="img/placeholder1.jpg" type="button">Foto 1</button>
+                    <button class="gallery-item" data-img="img/placeholder2.jpg" type="button">Foto 2</button>
+                    <button class="gallery-item" data-img="img/placeholder3.jpg" type="button">Foto 3</button>
+                    <button class="gallery-item" data-img="img/placeholder4.jpg" type="button">Foto 4</button>
+                    <button class="gallery-item" data-img="img/placeholder5.jpg" type="button">Foto 5</button>
+                    <button class="gallery-item" data-img="img/placeholder6.jpg" type="button">Foto 6</button>
+                </div>
+
+                <!-- Modal -->
+                <div class="modal" id="modal" aria-hidden="true">
+                    <div class="modal-backdrop" id="modalBackdrop"></div>
+                    <div class="modal-content" role="dialog" aria-modal="true" aria-label="Vista previa de imagen">
+                        <button class="modal-close" id="modalClose" type="button">Cerrar</button>
+                        <img id="modalImg" alt="Imagen de la galería" />
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <p class="muted">© <span id="year"></span> Clínica Casa Verde · La Paz, Canelones, Uruguay</p>
+            <a class="muted" href="index.html">Volver a inicio</a>
+        </div>
+    </footer>
+
+    <a class="fab" id="fabWhatsapp" href="#" aria-label="WhatsApp" rel="noopener">💬</a>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

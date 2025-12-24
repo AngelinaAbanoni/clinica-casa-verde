@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="es-UY">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Agenda | Clínica Casa Verde</title>
+    <meta name="description" content="Agenda tu consulta en Clínica Casa Verde." />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/agenda.css" />
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="index.html" aria-label="Ir a inicio">
+                <img src="img/logo.png" alt="Clínica Casa Verde" class="brand-logo" />
+            </a>
+
+            <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav">Menú</button>
+
+            <nav class="nav" id="siteNav">
+                <a href="index.html">Inicio</a>
+                <a href="servicios.html">Servicios</a>
+                <a href="equipo.html">Equipo</a>
+                <a href="convenios.html">Convenios</a>
+                <a href="beneficios.html">Beneficios</a>
+                <a href="../galeria.html">Galería</a>
+                <a href="contacto.html">Contacto</a>
+                <a class="btn btn-primary" href="agenda.html">Agendar</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero page-hero--agenda">
+            <div class="container page-hero-inner">
+                <h1>Agenda tu consulta</h1>
+                <p class="page-hero-quote">“Coordinemos día, hora y modalidad de atención de forma simple.”</p>
+            </div>
+        </section>
+
+        <section class="section" id="agenda">
+            <div class="container">
+                <div class="section-head">
+                    <p class="muted">Completá tus datos y te contactamos para confirmar disponibilidad.</p>
+                </div>
+
+                <form class="agenda-form" id="agendaForm">
+                    <div class="agenda-grid">
+                        <div class="field">
+                            <label for="especialidad">Especialidad</label>
+                            <select id="especialidad" name="especialidad" required>
+                                <option value="">Seleccionar…</option>
+                                <option>Psicología</option>
+                                <option>Psiquiatría</option>
+                                <option>Neuropsicología</option>
+                                <option>Neurología</option>
+                                <option>Neuropediatría</option>
+                                <option>Fonoaudiología</option>
+                                <option>Psicomotricidad</option>
+                                <option>Psicopedagogía</option>
+                                <option>Fisioterapia</option>
+                                <option>Fisioterapia acuática</option>
+                                <option>AQUA TEA</option>
+                                <option>Nutrición</option>
+                                <option>Terapia Ocupacional</option>
+                                <option>Médica de familia</option>
+                                <option>Psicofísicos</option>
+                                <option>Endocrinología - Diabetología</option>
+                            </select>
+                        </div>
+
+                        <div class="field">
+                            <label for="tipoPaciente">Paciente</label>
+                            <select id="tipoPaciente" name="tipoPaciente" required>
+                                <option value="">Seleccionar…</option>
+                                <option value="adulto">Adulto</option>
+                                <option value="menor">Menor</option>
+                            </select>
+                        </div>
+
+                        <div class="field">
+                            <label for="centro">Centro</label>
+                            <select id="centro" name="centro" required>
+                                <option value="">Seleccionar…</option>
+                                <option value="normal">Centro (Normal)</option>
+                                <option value="anexo">Anexo</option>
+                            </select>
+                        </div>
+
+                        <div class="field">
+                            <label for="fecha">Fecha</label>
+                            <input type="date" id="fecha" name="fecha" required />
+                        </div>
+
+                        <div class="field">
+                            <label for="hora">Hora</label>
+                            <input type="time" id="hora" name="hora" required />
+                        </div>
+
+                        <div class="field">
+                            <label for="nombre">Nombre y apellido</label>
+                            <input type="text" id="nombre" name="nombre" placeholder="Ej: Ana Pérez" required />
+                        </div>
+
+                        <div class="field">
+                            <label for="cedula">Cédula</label>
+                            <input type="text" id="cedula" name="cedula" placeholder="Ej: 12345678" required />
+                            <small class="muted">Sin puntos ni guiones.</small>
+                        </div>
+
+                        <div class="field field-full">
+                            <label for="comentarios">Comentarios (opcional)</label>
+                            <textarea id="comentarios" name="comentarios" rows="4"
+                                placeholder="Preferencias, motivos de consulta, etc."></textarea>
+                        </div>
+                    </div>
+
+                    <div class="agenda-actions">
+                        <button type="submit" class="btn-agendar">Solicitar agenda</button>
+                        <a href="contacto.html" class="btn-volver">Ver datos de contacto</a>
+                    </div>
+
+                    <p class="muted agenda-note" id="agendaMsg" aria-live="polite"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (tu footer de siempre) -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <p class="muted">© <span id="year"></span> Clínica Casa Verde · La Paz, Canelones, Uruguay</p>
+            <a class="muted" href="index.html">Volver a inicio</a>
+        </div>
+    </footer>
+
+    <a class="fab" id="fabWhatsapp" href="#" aria-label="WhatsApp" rel="noopener">💬</a>
+
+    <script src="js/main.js"></script>
+    <script src="js/agenda.js"></script>
+</body>
+
+</html>

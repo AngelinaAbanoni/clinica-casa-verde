@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="es-UY">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contacto | Clínica Casa Verde</title>
+    <meta name="description" content="Contactá a Clínica Casa Verde en La Paz, Canelones." />
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="index.html" aria-label="Ir a inicio">
+                <img src="img/logo.png" alt="Clínica Casa Verde" class="brand-logo" />
+            </a>
+
+            <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav">
+                Menú
+            </button>
+
+            <nav class="nav" id="siteNav">
+                <a href="index.html">Inicio</a>
+                <a href="servicios.html">Servicios</a>
+                <a href="equipo.html">Equipo</a>
+                <a href="convenios.html">Convenios</a>
+                <a href="beneficios.html">Beneficios</a>
+                <a href="galeria.html">Galería</a>
+                <a href="contacto.html">Contacto</a>
+                <!-- <a class="btn btn-primary" href="agenda.html">Agendar</a> -->
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="section alt">
+            <div class="container two-col">
+                <div>
+                    <h2>Contacto</h2>
+                    <p class="muted">Escribinos un mail y te respondemos a la brevedad.</p>
+
+                    <form class="form" id="contactForm" action="https://formspree.io/f/mvzplely" method="POST"
+                        novalidate>
+                        <label for="nombre">
+                            Nombre
+                        </label>
+                        <input id="nombre" type="text" name="nombre" autocomplete="name" required />
+
+                        <label for="email">
+                            Email
+                        </label>
+                        <input id="email" type="email" name="email" autocomplete="email" required />
+
+                        <label for="mensaje">
+                            Mensaje
+                        </label>
+                        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+                        <!-- Opcionales Formspree -->
+                        <input type="hidden" name="_subject" value="Nuevo mensaje desde la web - Clínica Casa Verde" />
+                        <input type="hidden" name="_replyto" id="replyto" value="" />
+
+                        <!-- Honeypot anti-spam (no lo ve el usuario) -->
+                        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+
+                        <button class="btn btn-primary" id="btnEnviar" type="submit">Enviar</button>
+                        <p class="small muted" id="formMsg" aria-live="polite"></p>
+                    </form>
+                </div>
+
+                <div class="card soft">
+                    <h3>Ubicación</h3>
+
+                    <p class="muted">
+                        La Paz, Canelones, Uruguay<br />
+                        <strong>Horario:</strong> Lunes a Viernes 8:00–20:00 · Sábados 8:00–14:00
+                    </p>
+
+                    <!-- CENTRAL -->
+                    <h4 style="margin: 16px 0 6px;">Central</h4>
+                    <p class="muted" style="margin-top: 0;">
+                        Luis Alberto de Herrera 220, La Paz, Canelones
+                    </p>
+                    <div class="map">
+                        <iframe title="Mapa - Clínica Casa Verde (Central)"
+                            src="https://www.google.com/maps?q=Luis%20Alberto%20de%20Herrera%20220%20La%20Paz%20Canelones%20Uruguay&output=embed"
+                            loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+
+                    <!-- ANEXO VIALE -->
+                    <h4 style="margin: 16px 0 6px;">Anexo Viale</h4>
+                    <p class="muted" style="margin-top: 0;">
+                        Avenida Artigas 506, La Paz, Canelones
+                    </p>
+                    <div class="map">
+                        <iframe title="Mapa - Clínica Casa Verde (Anexo Viale)"
+                            src="https://www.google.com/maps?q=Avenida%20Artigas%20506%20La%20Paz%20Canelones%20Uruguay&output=embed"
+                            loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <p class="muted">© <span id="year"></span> Clínica Casa Verde · La Paz, Canelones, Uruguay</p>
+            <a class="muted" href="index.html">Volver a inicio</a>
+        </div>
+    </footer>
+
+    <a class="fab" id="fabWhatsapp" href="#" aria-label="WhatsApp" rel="noopener">💬</a>
+
+    <script src="js/main.js"></script>
+
+    <script>
+        (function () {
+            const form = document.getElementById("contactForm");
+            const msg = document.getElementById("formMsg");
+            const btn = document.getElementById("btnEnviar");
+
+            const nombre = document.getElementById("nombre");
+            const email = document.getElementById("email");
+            const mensaje = document.getElementById("mensaje");
+            const replyto = document.getElementById("replyto");
+
+            function setMsg(texto) {
+                msg.textContent = texto;
+            }
+
+            form.addEventListener("submit", async (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+
+                // Validación simple (evita envíos vacíos)
+                const vNombre = nombre.value.trim();
+                const vEmail = email.value.trim();
+                const vMensaje = mensaje.value.trim();
+
+                if (vNombre === "" || vEmail === "" || vMensaje === "") {
+                    setMsg("❌ Completá nombre, email y mensaje antes de enviar.");
+                    return;
+                }
+
+                // Formspree: reply-to
+                replyto.value = vEmail;
+
+                setMsg("");
+                btn.disabled = true;
+                const originalText = btn.textContent;
+                btn.textContent = "Enviando...";
+
+                try {
+                    const fd = new FormData(form);
+
+                    const response = await fetch(form.action, {
+                        method: "POST",
+                        body: fd,
+                        headers: { "Accept": "application/json" }
+                    });
+
+                    if (response.ok) {
+                        form.reset();
+                        setMsg("✅ Mensaje enviado correctamente. Te respondemos a la brevedad.");
+                    } else {
+                        setMsg("❌ No se pudo enviar el mensaje. Intentá nuevamente.");
+                    }
+                } catch (error) {
+                    setMsg("❌ Error de conexión. Probá más tarde.");
+                } finally {
+                    btn.disabled = false;
+                    btn.textContent = originalText;
+                }
+            });
+        })();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,111 @@
+/* Formulario Agenda */
+.agenda-form {
+    margin-top: 1.5rem;
+}
+
+.agenda-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem 1.2rem;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: .4rem;
+}
+
+.field label {
+    font-weight: 700;
+}
+
+.field input,
+.field select,
+.field textarea {
+    padding: .85rem 1rem;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, .12);
+    outline: none;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+    border-color: rgba(47, 107, 79, .55);
+}
+
+.field-full {
+    grid-column: 1 / -1;
+}
+
+.agenda-actions {
+    margin-top: 1.2rem;
+    display: flex;
+    gap: .8rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.btn-agendar {
+    display: inline-block;
+    padding: .9rem 2.2rem;
+    border-radius: 999px;
+    background: #2f6b4f;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    border: 0;
+    cursor: pointer;
+    transition: background .25s ease, transform .2s ease;
+}
+
+.btn-agendar:hover {
+    background: #24563f;
+    transform: translateY(-2px);
+}
+
+.btn-volver {
+    display: inline-block;
+    padding: .5rem 1.2rem;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: .9rem;
+    background: #5e8f78;
+    color: #fff;
+    transition: background .25s ease, transform .2s ease;
+}
+
+.btn-volver:hover {
+    background: #4b7864;
+    transform: translateY(-2px);
+}
+
+.agenda-note {
+    margin-top: .8rem;
+}
+
+@media (max-width: 800px) {
+    .agenda-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ===== Agenda: hero simple y compacto ===== */
+.page-hero--agenda {
+    min-height: auto !important;
+    height: auto !important;
+    padding: 2rem 0 1rem !important;
+    /* 👈 achica el espacio abajo */
+}
+
+/* Pegamos la sección del formulario más arriba */
+.page-hero--agenda+.section {
+    padding-top: 1.2rem !important;
+}
+
+/* Evita margen extra del texto "Completá tus datos..." */
+.page-hero--agenda+.section .section-head {
+    margin-top: 0 !important;
+    margin-bottom: 1rem !important;
+}
