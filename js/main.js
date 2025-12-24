@@ -144,14 +144,15 @@ document.addEventListener("keydown", (e) => {
 const hero = document.querySelector(".hero");
 
 if (hero) {
-    const images = [ //SI QUIERO AGREGAR MAS IMAGENES PONGO ACA LA RUTA
-        "img/Neuro3.JPG",
-        "img/clinicaFrente.JPG",
-        "img/Fono.JPG",
-        "img/recepcion.JPG",
-        "img/Sala4.JPG",
-        "img/Salita.JPG"
+    const images = [
+        "/clinica-casa-verde/img/Neuro3.JPG",
+        "/clinica-casa-verde/img/clinicaFrente.JPG",
+        "/clinica-casa-verde/img/Fono.JPG",
+        "/clinica-casa-verde/img/recepcion.JPG",
+        "/clinica-casa-verde/img/Sala4.JPG",
+        "/clinica-casa-verde/img/Salita.JPG"
     ];
+
 
     let index = 0;
     let showingA = true;
