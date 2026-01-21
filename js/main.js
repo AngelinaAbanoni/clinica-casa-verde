@@ -1,6 +1,6 @@
-// ===== Config básica (cambiamos luego)
+// ===== Config básica
 const WHATSAPP_NUMBER = "59891501957"; // sin + ni espacios
-const WHATSAPP_MSG = "Hola, quiero agendar una consulta en Clínica Casa Verde.";
+const WHATSAPP_MSG = "Hola, quiero agendar una consulta.";
 
 function buildWhatsappLink() {
     const text = encodeURIComponent(WHATSAPP_MSG);
