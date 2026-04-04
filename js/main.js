@@ -145,12 +145,12 @@ const hero = document.querySelector(".hero");
 
 if (hero) {
     const images = [
-        "/clinica-casa-verde/img/Neuro3.JPG",
-        "/clinica-casa-verde/img/clinicaFrente.JPG",
-        "/clinica-casa-verde/img/Fono.JPG",
-        "/clinica-casa-verde/img/recepcion.JPG",
-        "/clinica-casa-verde/img/Sala4.JPG",
-        "/clinica-casa-verde/img/Salita.JPG"
+        "/img/Neuro3.JPG",
+        "/img/clinicaFrente.JPG",
+        "/img/Fono.JPG",
+        "/img/recepcion.JPG",
+        "/img/Sala4.JPG",
+        "/img/Salita.JPG"
     ];
 
 
